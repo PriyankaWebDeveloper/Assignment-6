@@ -60,7 +60,11 @@ class _AddEntryBottomSheetState extends State<AddEntryBottomSheet> {
                     style: OutlinedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(
+                        context,
+                      ); // to get out of this page after pressing cancel
+                    },
                     child: const Text(
                       "Cancle",
                       style: TextStyle(color: Color.fromARGB(255, 204, 6, 65)),
@@ -71,7 +75,11 @@ class _AddEntryBottomSheetState extends State<AddEntryBottomSheet> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                     ),
-                    onPressed: printData,
+                    onPressed: () {
+                      Navigator.pop(
+                        context,
+                      ); // to get out of this page after pressing save
+                    },
                     child: Text(
                       "Save",
                       style: TextStyle(
